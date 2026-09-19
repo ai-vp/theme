@@ -29,7 +29,6 @@ jobs:
           check-latest: true
           cache: "pnpm"
           cache-dependency-path: pnpm-lock.yaml
-          registry-url: "https://npm.cnb.cool/hcf-ai/npm/"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -38,6 +37,6 @@ jobs:
         run: pnpm build
 
       - name: Publish to npm
-        run: pnpm -r run release
+        run: pnpm publish --registry=https://npm.cnb.cool/hcf-ai/npm/ --access public --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.CNP_NPM_TOKEN }}
