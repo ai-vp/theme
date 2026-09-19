@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  vue-demi: true
+# overrides：后续新增demo项目时使用
+# demo内import @models-ai/theme-dux，会自动关联本地源码包，不用npm安装
+overrides:
+  "@models-ai/theme-dux": link:packages/theme-dux
