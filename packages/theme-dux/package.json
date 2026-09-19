@@ -1,6 +1,6 @@
 {
-  "name": "@models-ai/theme-dux",
-  "version": "1.1.9",
+  "name": "@hcf-ai/theme-dux",
+  "version": "1.0.1",
   "description": "基于 DuxWeb 主题二次增强的 VitePress 文档主题，适配AI知识库与项目文档",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -28,7 +28,7 @@
       "import": "./dist/esm/shims/dayjs.js",
       "require": "./dist/cjs/shims/dayjs.cjs"
     },
-    "./style.css": "./dist/esm/theme.css"
+    "./dist/index.css": "./dist/esm/theme-dux.css"
   },
   "files": [
     "dist",
@@ -37,11 +37,11 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "pnpm run clean && vite build",
+    "build": "pnpm run clean && vite build && (vue-tsc --declaration --emitDeclarationOnly --outDir dist/types || true)",
     "build:watch": "vite build --watch",
     "dev": "pnpm run build:watch",
     "prepublishOnly": "pnpm run build",
-    "release": "npm publish --access public"
+    "release": "pnpm publish --access public"
   },
   "dependencies": {
     "@iconify/tailwind4": "^1.0.6",
@@ -72,14 +72,14 @@
   "keywords": [
     "vitepress",
     "theme",
-    "models-ai",
+    "hcf-ai",
     "vue",
     "documentation"
   ],
   "author": "hefung",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.cnb.cool/hcf-ai/npm/-/packages/"
   },
   "repository": {
     "type": "git",

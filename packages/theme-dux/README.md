@@ -1,4 +1,4 @@
-# @models-ai/theme-dux
+# @hcf-ai/theme-dux
 
 现代、优雅、可定制的 VitePress 文档主题，适合技术文档与项目站点。
 
@@ -18,9 +18,9 @@
 ### 1. 安装主题
 
 ```bash
-pnpm add @models-ai/theme-dux
+pnpm add @hcf-ai/theme-dux
 # 或
-npm i @models-ai/theme-dux
+npm i @hcf-ai/theme-dux
 ```
 
 ### 2. 最小化配置（推荐）
@@ -29,7 +29,7 @@ npm i @models-ai/theme-dux
 
 ```ts
 // .vitepress/config.mts
-import { withTheme } from "@models-ai/theme-dux/config";
+import { withTheme } from "@hcf-ai/theme-dux/config";
 
 export default withTheme({
   title: "My Docs",
@@ -49,8 +49,8 @@ export default withTheme({
 
 ```ts
 // .vitepress/theme/index.ts
-import theme from "@models-ai/theme-dux";
-import "@models-ai/theme-dux/dist/index.css";
+import theme from "@hcf-ai/theme-dux";
+import "@hcf-ai/theme-dux/dist/index.css";
 
 export default {
   extends: theme,
