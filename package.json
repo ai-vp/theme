@@ -9,9 +9,9 @@
   "packageManager": "pnpm@12.4.2",
   "description": "多套VitePress主题集合，包含文档主题、博客主题、增强官方主题等",
   "scripts": {
-    "build": "pnpm -r run build",
-    "clean": "pnpm -r run clean",
-    "release": "pnpm -r run release"
+    "build": "pnpm -r  build",
+    "clean": "pnpm -r  clean",
+    "release": "pnpm -r  release"
   },
   "keywords": [
     "vitepress",
