@@ -29,7 +29,7 @@ jobs:
           check-latest: true
           cache: "pnpm"
           cache-dependency-path: pnpm-lock.yaml
-          registry-url: "https://registry.npmjs.org/"
+          registry-url: "https://npm.cnb.cool/hcf-ai/npm/"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
