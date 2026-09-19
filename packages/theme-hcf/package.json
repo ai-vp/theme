@@ -1,6 +1,6 @@
 {
-  "name": "@hcf-ai/theme-dux",
-  "version": "1.0.1",
+  "name": "@hcf-ai/theme-hcf",
+  "version": "1.0.2",
   "description": "基于 DuxWeb 主题二次增强的 VitePress 文档主题，适配AI知识库与项目文档",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -28,7 +28,7 @@
       "import": "./dist/esm/shims/dayjs.js",
       "require": "./dist/cjs/shims/dayjs.cjs"
     },
-    "./dist/index.css": "./dist/esm/theme-dux.css"
+    "./dist/index.css": "./dist/esm/theme-hcf.css"
   },
   "files": [
     "dist",
@@ -84,6 +84,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/models-ai/vitepress-theme",
-    "directory": "packages/theme-dux"
+    "directory": "packages/theme-hcf"
   }
 }

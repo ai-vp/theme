@@ -169,7 +169,7 @@ importers:
 
   .: {}
 
-  packages/theme-dux:
+  packages/theme-hcf:
     dependencies:
       '@iconify/tailwind4':
         specifier: ^1.0.6

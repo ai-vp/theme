@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 import type { UserConfig } from "vitepress";
 import type { Alias, AliasOptions } from "vite";
 
-type DuxConfig = UserConfig & {
+type HcfConfig = UserConfig & {
   vite?: UserConfig["vite"];
 };
 
@@ -15,26 +15,26 @@ function mergeNoExternal(value: unknown): true | (string | RegExp)[] {
   if (Array.isArray(value)) {
     const hasNonString = value.some((item) => typeof item !== "string");
     if (hasNonString) {
-      const exists = value.some((item) => item === "@hcf-ai/theme-dux");
-      return exists ? value.slice() : [...value, "@hcf-ai/theme-dux"];
+      const exists = value.some((item) => item === "@hcf-ai/theme-hcf");
+      return exists ? value.slice() : [...value, "@hcf-ai/theme-hcf"];
     }
-    return uniq([...value, "@hcf-ai/theme-dux"]);
+    return uniq([...value, "@hcf-ai/theme-hcf"]);
   }
-  if (typeof value === "string") return uniq([value, "@hcf-ai/theme-dux"]);
-  if (value instanceof RegExp) return [value, "@hcf-ai/theme-dux"];
-  return ["@hcf-ai/theme-dux"];
+  if (typeof value === "string") return uniq([value, "@hcf-ai/theme-hcf"]);
+  if (value instanceof RegExp) return [value, "@hcf-ai/theme-hcf"];
+  return ["@hcf-ai/theme-hcf"];
 }
 
 function mergeExclude(value?: string[]) {
   const list = Array.isArray(value) ? value : [];
-  return uniq([...list, "@hcf-ai/theme-dux"]);
+  return uniq([...list, "@hcf-ai/theme-hcf"]);
 }
 
 function mergeAlias(value?: AliasOptions): Alias[] {
   const aliasList: Alias[] = [
     {
       find: /^dayjs$/,
-      replacement: "@hcf-ai/theme-dux/shims/dayjs",
+      replacement: "@hcf-ai/theme-hcf/shims/dayjs",
     },
     {
       find: /^dayjs\/plugin\//,
@@ -63,14 +63,14 @@ function mergeAlias(value?: AliasOptions): Alias[] {
   if (!hasSanitizeAlias) {
     aliasList.push({
       find: /^@braintree\/sanitize-url$/,
-      replacement: "@hcf-ai/theme-dux/shims/sanitize-url",
+      replacement: "@hcf-ai/theme-hcf/shims/sanitize-url",
     });
   }
 
   return aliasList;
 }
 
-export function withDuxTheme(config: DuxConfig): UserConfig {
+export function withHcfTheme(config: HcfConfig): UserConfig {
   const vite = config.vite ?? {};
   const ssr = {
     ...(vite.ssr ?? {}),
