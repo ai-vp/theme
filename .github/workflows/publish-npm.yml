@@ -36,7 +36,7 @@ jobs:
       - name: Build theme packages
         run: pnpm build
 
-      - name: Publish to npm
+      - name: Publish to cnb-npm
         run: pnpm publish --registry=https://npm.cnb.cool/hcf-ai/npm/-/packages/ --access public --no-git-checks
         working-directory: packages/theme-hcf
         env:
