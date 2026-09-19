@@ -79,7 +79,8 @@
   "author": "hefung",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.cnb.cool/hcf-ai/npm/-/packages/"
+    "registry": "https://npm.cnb.cool/hcf-ai/npm/-/packages/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
