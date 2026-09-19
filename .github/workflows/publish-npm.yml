@@ -37,6 +37,6 @@ jobs:
         run: pnpm build
 
       - name: Publish to npm
-        run: pnpm publish --registry=https://npm.cnb.cool/hcf-ai/npm/ --access public --no-git-checks
+        run: pnpm publish --registry=https://npm.cnb.cool/hcf-ai/npm/-/packages/ --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.CNP_NPM_TOKEN }}
