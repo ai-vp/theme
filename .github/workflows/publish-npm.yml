@@ -40,6 +40,6 @@ jobs:
 
       - name: Publish to npm
         run: pnpm publish --access public --no-git-checks
-        working-directory: packages/theme-hcf
+        working-directory: packages/vitepress-theme-hcf
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
