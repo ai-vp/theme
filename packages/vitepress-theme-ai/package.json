@@ -1,6 +1,6 @@
 {
   "name": "@ai-vp/vitepress-theme-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于 VitePress 主题二次增强的文档主题，适配AI知识库与项目文档",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
