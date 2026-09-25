@@ -1,12 +1,12 @@
 {
-  "name": "vitepress-theme",
+  "name": "theme",
   "version": "1.0.0",
   "type": "module",
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@12.4.2",
-  "description": "多套VitePress主题集合，包含文档主题、博客主题、增强官方主题等",
+  "packageManager": "pnpm@12.6.0",
+  "description": "多套VitePress & vuepress 主题集合，包含文档主题、博客主题、增强官方主题等",
   "scripts": {
     "build": "pnpm -r  build",
     "clean": "pnpm -r  clean",
@@ -14,7 +14,9 @@
   },
   "keywords": [
     "vitepress",
+    "vuepress",
     "vitepress-theme",
+    "vuepress-theme",
     "models-ai",
     "docs-theme",
     "blog-theme"
