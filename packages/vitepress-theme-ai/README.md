@@ -1,4 +1,4 @@
-# @ai-vp/vitepress-theme-hcf
+# @ai-vp/vitepress-theme-ai
 
 现代、优雅、可定制的 VitePress 文档主题，适合技术文档与项目站点。
 
@@ -18,9 +18,9 @@
 ### 1. 安装主题
 
 ```bash
-pnpm add @ai-vp/vitepress-theme-hcf
+pnpm add @ai-vp/vitepress-theme-ai
 # 或
-npm i @ai-vp/vitepress-theme-hcf
+npm i @ai-vp/vitepress-theme-ai
 ```
 
 ### 2. 在项目根目录新建 `.npmrc`
@@ -38,7 +38,7 @@ ignoreBuilds=false
 
 ```ts
 // .vitepress/config.ts
-import { withTheme } from "@ai-vp/vitepress-theme-hcf /config";
+import { withTheme } from "@ai-vp/vitepress-theme-ai /config";
 
 export default withTheme({
   title: "My Docs",
@@ -51,7 +51,7 @@ export default withTheme({
 
 ```ts
 // .vitepress/theme/index.ts
-import { theme } from "@ai-vp/vitepress-theme-hcf ";
+import { theme } from "@ai-vp/vitepress-theme-ai ";
 export default theme;
 ```
 
@@ -65,7 +65,7 @@ pnpm vitepress dev docs
 ```ts
 export default withTheme({
   title: "My Docs",
-  description: "基于 @ai-vp/vitepress-theme-hcf  构建文档站点",
+  description: "基于 @ai-vp/vitepress-theme-ai  构建文档站点",
   lang: "zh-CN",
   themeConfig: {
     logo: "/logo.svg",

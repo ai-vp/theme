@@ -1,5 +1,5 @@
 {
-  "name": "@ai-vp/vitepress-theme-hcf",
+  "name": "@ai-vp/vitepress-theme-ai",
   "version": "1.0.0",
   "description": "基于 VitePress 主题二次增强的文档主题，适配AI知识库与项目文档",
   "type": "module",
@@ -28,7 +28,7 @@
       "import": "./dist/esm/shims/dayjs.js",
       "require": "./dist/cjs/shims/dayjs.cjs"
     },
-    "./dist/index.css": "./dist/esm/vitepress-theme-hcf.css"
+    "./dist/index.css": "./dist/esm/vitepress-theme-ai.css"
   },
   "files": [
     "dist",
@@ -72,7 +72,7 @@
   "keywords": [
     "vitepress",
     "theme",
-    "hcf-ai",
+    "ai-ai",
     "vue",
     "documentation"
   ],
@@ -84,6 +84,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ai-vp/theme",
-    "directory": "packages/vitepress-theme-hcf"
+    "directory": "packages/vitepress-theme-ai"
   }
 }

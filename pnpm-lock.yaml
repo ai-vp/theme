@@ -163,13 +163,13 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@ai-vp/vitepress-theme-hcf': link:packages/vitepress-theme-hcf
+  '@ai-vp/vitepress-theme-ai': link:packages/vitepress-theme-ai
 
 importers:
 
   .: {}
 
-  packages/vitepress-theme-hcf:
+  packages/vitepress-theme-ai:
     dependencies:
       '@iconify/tailwind4':
         specifier: ^1.0.6
