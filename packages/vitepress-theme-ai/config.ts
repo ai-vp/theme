@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 import type { UserConfig } from "vitepress";
 import type { Alias, AliasOptions } from "vite";
 
-type aiConfig = UserConfig & {
+type AiConfig = UserConfig & {
   vite?: UserConfig["vite"];
 };
 
@@ -20,7 +20,8 @@ function mergeNoExternal(value: unknown): true | (string | RegExp)[] {
     }
     return uniq([...value, "@ai-vp/vitepress-theme-ai"]);
   }
-  if (typeof value === "string") return uniq([value, "@ai-vp/vitepress-theme-ai"]);
+  if (typeof value === "string")
+    return uniq([value, "@ai-vp/vitepress-theme-ai"]);
   if (value instanceof RegExp) return [value, "@ai-vp/vitepress-theme-ai"];
   return ["@ai-vp/vitepress-theme-ai"];
 }
@@ -70,7 +71,7 @@ function mergeAlias(value?: AliasOptions): Alias[] {
   return aliasList;
 }
 
-export function withaiTheme(config: aiConfig): UserConfig {
+export function withAiTheme(config: AiConfig): UserConfig {
   const vite = config.vite ?? {};
   const ssr = {
     ...(vite.ssr ?? {}),
