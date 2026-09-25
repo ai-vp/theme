@@ -28,7 +28,7 @@
       "import": "./dist/esm/shims/dayjs.js",
       "require": "./dist/cjs/shims/dayjs.cjs"
     },
-    "./dist/index.css": "./dist/esm/theme-hcf.css"
+    "./dist/index.css": "./dist/esm/vitepress-theme-hcf.css"
   },
   "files": [
     "dist",
@@ -83,7 +83,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/models-ai/vitepress-theme",
+    "url": "https://github.com/ai-vp/theme",
     "directory": "packages/theme-hcf"
   }
 }
