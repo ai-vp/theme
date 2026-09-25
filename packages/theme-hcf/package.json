@@ -1,5 +1,5 @@
 {
-  "name": "@hcf-ai/theme-hcf",
+  "name": "@ai-vp/vite-theme-hcf",
   "version": "1.0.2",
   "description": "基于 DuxWeb 主题二次增强的 VitePress 文档主题，适配AI知识库与项目文档",
   "type": "module",
