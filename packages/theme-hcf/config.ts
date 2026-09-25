@@ -15,26 +15,26 @@ function mergeNoExternal(value: unknown): true | (string | RegExp)[] {
   if (Array.isArray(value)) {
     const hasNonString = value.some((item) => typeof item !== "string");
     if (hasNonString) {
-      const exists = value.some((item) => item === "@hcf-ai/theme-hcf");
-      return exists ? value.slice() : [...value, "@hcf-ai/theme-hcf"];
+      const exists = value.some((item) => item === "@ai-vp/vitepress-theme-hcf");
+      return exists ? value.slice() : [...value, "@ai-vp/vitepress-theme-hcf"];
     }
-    return uniq([...value, "@hcf-ai/theme-hcf"]);
+    return uniq([...value, "@ai-vp/vitepress-theme-hcf"]);
   }
-  if (typeof value === "string") return uniq([value, "@hcf-ai/theme-hcf"]);
-  if (value instanceof RegExp) return [value, "@hcf-ai/theme-hcf"];
-  return ["@hcf-ai/theme-hcf"];
+  if (typeof value === "string") return uniq([value, "@ai-vp/vitepress-theme-hcf"]);
+  if (value instanceof RegExp) return [value, "@ai-vp/vitepress-theme-hcf"];
+  return ["@ai-vp/vitepress-theme-hcf"];
 }
 
 function mergeExclude(value?: string[]) {
   const list = Array.isArray(value) ? value : [];
-  return uniq([...list, "@hcf-ai/theme-hcf"]);
+  return uniq([...list, "@ai-vp/vitepress-theme-hcf"]);
 }
 
 function mergeAlias(value?: AliasOptions): Alias[] {
   const aliasList: Alias[] = [
     {
       find: /^dayjs$/,
-      replacement: "@hcf-ai/theme-hcf/shims/dayjs",
+      replacement: "@ai-vp/vitepress-theme-hcf/shims/dayjs",
     },
     {
       find: /^dayjs\/plugin\//,
@@ -63,7 +63,7 @@ function mergeAlias(value?: AliasOptions): Alias[] {
   if (!hasSanitizeAlias) {
     aliasList.push({
       find: /^@braintree\/sanitize-url$/,
-      replacement: "@hcf-ai/theme-hcf/shims/sanitize-url",
+      replacement: "@ai-vp/vitepress-theme-hcf/shims/sanitize-url",
     });
   }
 
