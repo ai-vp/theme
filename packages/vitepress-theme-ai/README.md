@@ -1,4 +1,4 @@
-# @ai-vp/vitepress-theme-ai
+# @hcf-ai/theme-hcf
 
 现代、优雅、可定制的 VitePress 文档主题，适合技术文档与项目站点。
 
@@ -18,9 +18,9 @@
 ### 1. 安装主题
 
 ```bash
-pnpm add @ai-vp/vitepress-theme-ai
+pnpm add @hcf-ai/theme-hcf
 # 或
-npm i @ai-vp/vitepress-theme-ai
+npm i @hcf-ai/theme-hcf
 ```
 
 ### 2. 在项目根目录新建 `.npmrc`
@@ -34,13 +34,13 @@ ignoreBuilds=false
 
 ### 3. 最小化配置（推荐）
 
-`withAiTheme` 会自动注入 `vite.ssr.noExternal`、`optimizeDeps.exclude`，并启用 Mermaid 运行时渲染
+`withTheme` 会自动注入 `vite.ssr.noExternal`、`optimizeDeps.exclude`，并启用 Mermaid 运行时渲染
 
 ```ts
 // .vitepress/config.ts
-import { withAiTheme } from "@ai-vp/vitepress-theme-ai /config";
+import { withTheme } from "@hcf-ai/theme-hcf/config";
 
-export default withAiTheme({
+export default withTheme({
   title: "My Docs",
   description: "",
   themeConfig: {
@@ -51,7 +51,7 @@ export default withAiTheme({
 
 ```ts
 // .vitepress/theme/index.ts
-import { theme } from "@ai-vp/vitepress-theme-ai ";
+import { theme } from "@hcf-ai/theme-hcf";
 export default theme;
 ```
 
@@ -63,9 +63,9 @@ pnpm vitepress dev docs
 ## 配置项示例
 
 ```ts
-export default withAiTheme({
+export default withTheme({
   title: "My Docs",
-  description: "基于 @ai-vp/vitepress-theme-ai  构建文档站点",
+  description: "基于 @hcf-ai/theme-hcf 构建文档站点",
   lang: "zh-CN",
   themeConfig: {
     logo: "/logo.svg",
