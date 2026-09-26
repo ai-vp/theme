@@ -41,8 +41,19 @@ jobs:
       - name: Build theme packages
         run: pnpm run build
 
+      - name: Setup npm auth
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+      - name: Check npm user
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm whoami
+
       - name: Publish to npm
-        run: pnpm run release
+        run: pnpm publish --access public --no-git-checks
         working-directory: packages/theme-hcf
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
