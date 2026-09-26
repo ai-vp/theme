@@ -1,7 +1,7 @@
 {
-  "name": "@ai-vp/vitepress-theme-ai",
-  "version": "1.0.5",
-  "description": "基于 vitepress 主题二次增强的文档主题，适配AI知识库与项目文档",
+  "name": "@hcf-ai/theme-hcf",
+  "version": "1.0.2",
+  "description": "基于 VitePress 主题二次增强的文档主题，适配AI知识库与项目文档",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
@@ -28,7 +28,7 @@
       "import": "./dist/esm/shims/dayjs.js",
       "require": "./dist/cjs/shims/dayjs.cjs"
     },
-    "./dist/index.css": "./dist/esm/vitepress-theme-ai.css"
+    "./dist/index.css": "./dist/esm/theme-hcf.css"
   },
   "files": [
     "dist",
@@ -41,7 +41,7 @@
     "build:watch": "vite build --watch",
     "dev": "pnpm run build:watch",
     "prepublishOnly": "pnpm run build",
-    "release": "pnpm publish --access public"
+    "release": "pnpm publish --no-git-checks"
   },
   "dependencies": {
     "@iconify/tailwind4": "^1.0.6",
@@ -83,7 +83,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-vp/theme",
-    "directory": "packages/vitepress-theme-ai"
+    "url": "https://github.com/models-ai/vitepress-theme",
+    "directory": "packages/theme-hcf"
   }
 }

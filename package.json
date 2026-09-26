@@ -5,12 +5,13 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@10.31.0",
   "description": "多套VitePress & vuepress 主题集合，包含文档主题、博客主题、增强官方主题等",
   "scripts": {
     "build": "pnpm -r  build",
-    "clean": "pnpm -r  clean",
-    "release": "pnpm -r  release"
+    "version:patch": "pnpm -C packages/theme-hcf version patch --no-git-tag-version",
+    "version:minor": "pnpm -C packages/theme-hcf version minor --no-git-tag-version",
+    "version:major": "pnpm -C packages/theme-hcf version major --no-git-tag-version",
+    "release": "pnpm -C packages/theme-hcf release"
   },
   "keywords": [
     "vitepress",

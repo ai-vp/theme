@@ -34,13 +34,13 @@ ignoreBuilds=false
 
 ### 3. 最小化配置（推荐）
 
-`withTheme` 会自动注入 `vite.ssr.noExternal`、`optimizeDeps.exclude`，并启用 Mermaid 运行时渲染
+`withHcfTheme` 会自动注入 `vite.ssr.noExternal`、`optimizeDeps.exclude`，并启用 Mermaid 运行时渲染
 
 ```ts
 // .vitepress/config.ts
-import { withTheme } from "@hcf-ai/theme-hcf/config";
+import { withHcfTheme } from "@hcf-ai/theme-hcf/config";
 
-export default withTheme({
+export default withHcfTheme({
   title: "My Docs",
   description: "",
   themeConfig: {
@@ -63,7 +63,7 @@ pnpm vitepress dev docs
 ## 配置项示例
 
 ```ts
-export default withTheme({
+export default withHcfTheme({
   title: "My Docs",
   description: "基于 @hcf-ai/theme-hcf 构建文档站点",
   lang: "zh-CN",
