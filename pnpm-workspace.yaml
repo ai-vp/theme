@@ -1,10 +1,4 @@
 packages:
   - packages/*
-allowBuilds:
-  "@parcel/watcher": true
-  esbuild: true
-  vue-demi: true
-# overrides：后续新增demo项目时使用
-# demo内import @ai-vp/vitepress-theme-ai，会自动关联本地源码包，不用npm安装
 overrides:
-  "@ai-vp/vitepress-theme-ai": link:packages/vitepress-theme-ai
+  "@ai-vp/vptheme": link:packages/vptheme

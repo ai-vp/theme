@@ -1,5 +1,5 @@
 {
-  "name": "theme",
+  "name": "themes",
   "version": "1.0.1",
   "type": "module",
   "workspaces": [
@@ -8,10 +8,10 @@
   "description": "多套VitePress & vuepress 主题集合，包含文档主题、博客主题、增强官方主题等",
   "scripts": {
     "build": "pnpm -r  build",
-    "version:patch": "pnpm -C packages/theme-hcf version patch --no-git-tag-version",
-    "version:minor": "pnpm -C packages/theme-hcf version minor --no-git-tag-version",
-    "version:major": "pnpm -C packages/theme-hcf version major --no-git-tag-version",
-    "release": "pnpm -C packages/theme-hcf release"
+    "version:patch": "pnpm -C packages/vptheme version patch --no-git-tag-version",
+    "version:minor": "pnpm -C packages/vptheme version minor --no-git-tag-version",
+    "version:major": "pnpm -C packages/vptheme version major --no-git-tag-version",
+    "release": "pnpm -C packages/vptheme release"
   },
   "keywords": [
     "vitepress",
