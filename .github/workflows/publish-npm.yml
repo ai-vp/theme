@@ -36,7 +36,7 @@ jobs:
           pnpm store prune
 
       - name: Install dependencies
-        run: pnpm ci --allow-build=esbuild,vue-demi
+        run: pnpm ci
 
       - name: Build theme packages
         run: pnpm run build
